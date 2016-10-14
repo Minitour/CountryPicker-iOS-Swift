@@ -12,8 +12,6 @@
 		941274941BF60FD20022B878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 941274921BF60FD20022B878 /* Main.storyboard */; };
 		941274961BF60FD20022B878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 941274951BF60FD20022B878 /* Assets.xcassets */; };
 		941274991BF60FD20022B878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 941274971BF60FD20022B878 /* LaunchScreen.storyboard */; };
-		941274A41BF60FD20022B878 /* CountryPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941274A31BF60FD20022B878 /* CountryPickerTests.swift */; };
-		941274AF1BF60FD20022B878 /* CountryPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941274AE1BF60FD20022B878 /* CountryPickerUITests.swift */; };
 		941274BD1BF6101F0022B878 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941274BC1BF6101F0022B878 /* CountryPicker.swift */; };
 		941274BF1BF627F80022B878 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941274BE1BF627F80022B878 /* CountryView.swift */; };
 		941274C11BF62F450022B878 /* CountryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 941274C01BF62F450022B878 /* CountryView.xib */; };
@@ -35,23 +33,6 @@
 		945CE4D71BF651C5007CF589 /* NBPhoneNumberUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 945CE4C91BF651C5007CF589 /* NBPhoneNumberUtil.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		941274A01BF60FD20022B878 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 941274831BF60FD20022B878 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9412748A1BF60FD20022B878;
-			remoteInfo = CountryPicker;
-		};
-		941274AB1BF60FD20022B878 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 941274831BF60FD20022B878 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9412748A1BF60FD20022B878;
-			remoteInfo = CountryPicker;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		9412748B1BF60FD20022B878 /* CountryPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9412748E1BF60FD20022B878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,10 +41,8 @@
 		941274951BF60FD20022B878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		941274981BF60FD20022B878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9412749A1BF60FD20022B878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9412749F1BF60FD20022B878 /* CountryPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountryPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		941274A31BF60FD20022B878 /* CountryPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerTests.swift; sourceTree = "<group>"; };
 		941274A51BF60FD20022B878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		941274AA1BF60FD20022B878 /* CountryPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountryPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		941274AE1BF60FD20022B878 /* CountryPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerUITests.swift; sourceTree = "<group>"; };
 		941274B01BF60FD20022B878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		941274BC1BF6101F0022B878 /* CountryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPicker.swift; sourceTree = "<group>"; };
@@ -110,20 +89,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9412749C1BF60FD20022B878 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		941274A71BF60FD20022B878 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -142,8 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				9412748B1BF60FD20022B878 /* CountryPicker.app */,
-				9412749F1BF60FD20022B878 /* CountryPickerTests.xctest */,
-				941274AA1BF60FD20022B878 /* CountryPickerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,42 +210,6 @@
 			productReference = 9412748B1BF60FD20022B878 /* CountryPicker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9412749E1BF60FD20022B878 /* CountryPickerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 941274B61BF60FD20022B878 /* Build configuration list for PBXNativeTarget "CountryPickerTests" */;
-			buildPhases = (
-				9412749B1BF60FD20022B878 /* Sources */,
-				9412749C1BF60FD20022B878 /* Frameworks */,
-				9412749D1BF60FD20022B878 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				941274A11BF60FD20022B878 /* PBXTargetDependency */,
-			);
-			name = CountryPickerTests;
-			productName = CountryPickerTests;
-			productReference = 9412749F1BF60FD20022B878 /* CountryPickerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		941274A91BF60FD20022B878 /* CountryPickerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 941274B91BF60FD20022B878 /* Build configuration list for PBXNativeTarget "CountryPickerUITests" */;
-			buildPhases = (
-				941274A61BF60FD20022B878 /* Sources */,
-				941274A71BF60FD20022B878 /* Frameworks */,
-				941274A81BF60FD20022B878 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				941274AC1BF60FD20022B878 /* PBXTargetDependency */,
-			);
-			name = CountryPickerUITests;
-			productName = CountryPickerUITests;
-			productReference = 941274AA1BF60FD20022B878 /* CountryPickerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -295,14 +222,7 @@
 				TargetAttributes = {
 					9412748A1BF60FD20022B878 = {
 						CreatedOnToolsVersion = 7.1.1;
-					};
-					9412749E1BF60FD20022B878 = {
-						CreatedOnToolsVersion = 7.1.1;
-						TestTargetID = 9412748A1BF60FD20022B878;
-					};
-					941274A91BF60FD20022B878 = {
-						CreatedOnToolsVersion = 7.1.1;
-						TestTargetID = 9412748A1BF60FD20022B878;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -320,8 +240,6 @@
 			projectRoot = "";
 			targets = (
 				9412748A1BF60FD20022B878 /* CountryPicker */,
-				9412749E1BF60FD20022B878 /* CountryPickerTests */,
-				941274A91BF60FD20022B878 /* CountryPickerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -337,20 +255,6 @@
 				941274961BF60FD20022B878 /* Assets.xcassets in Resources */,
 				941274941BF60FD20022B878 /* Main.storyboard in Resources */,
 				941274C11BF62F450022B878 /* CountryView.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9412749D1BF60FD20022B878 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		941274A81BF60FD20022B878 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,36 +285,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9412749B1BF60FD20022B878 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				941274A41BF60FD20022B878 /* CountryPickerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		941274A61BF60FD20022B878 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				941274AF1BF60FD20022B878 /* CountryPickerUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		941274A11BF60FD20022B878 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9412748A1BF60FD20022B878 /* CountryPicker */;
-			targetProxy = 941274A01BF60FD20022B878 /* PBXContainerItemProxy */;
-		};
-		941274AC1BF60FD20022B878 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9412748A1BF60FD20022B878 /* CountryPicker */;
-			targetProxy = 941274AB1BF60FD20022B878 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		941274921BF60FD20022B878 /* Main.storyboard */ = {
@@ -522,6 +397,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.maxmikheev.CountryPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CountryPicker/CountryCode-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -534,54 +410,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.maxmikheev.CountryPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CountryPicker/CountryCode-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		941274B71BF60FD20022B878 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CountryPickerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.maxmikheev.CountryPickerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountryPicker.app/CountryPicker";
-			};
-			name = Debug;
-		};
-		941274B81BF60FD20022B878 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CountryPickerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.maxmikheev.CountryPickerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountryPicker.app/CountryPicker";
-			};
-			name = Release;
-		};
-		941274BA1BF60FD20022B878 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = CountryPickerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.maxmikheev.CountryPickerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = CountryPicker;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		941274BB1BF60FD20022B878 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = CountryPickerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.maxmikheev.CountryPickerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = CountryPicker;
-				USES_XCTRUNNER = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -602,24 +431,6 @@
 			buildConfigurations = (
 				941274B41BF60FD20022B878 /* Debug */,
 				941274B51BF60FD20022B878 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		941274B61BF60FD20022B878 /* Build configuration list for PBXNativeTarget "CountryPickerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				941274B71BF60FD20022B878 /* Debug */,
-				941274B81BF60FD20022B878 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		941274B91BF60FD20022B878 /* Build configuration list for PBXNativeTarget "CountryPickerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				941274BA1BF60FD20022B878 /* Debug */,
-				941274BB1BF60FD20022B878 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,15 +1,26 @@
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
 
 protocol CountryPhoneCodePickerDelegate {
-    func countryPhoneCodePicker(picker: CountryPicker, didSelectCountryCountryWithName name: String, countryCode: String, phoneCode: String)
+    func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryCountryWithName name: String, countryCode: String, phoneCode: String)
 }
 
 struct Country {
-    var code: String?
-    var name: String?
-    var phoneCode: String?
+    var code: String
+    var name: String
+    var phoneCode: String
     
-    init(code: String?, name: String?, phoneCode: String?) {
+    init(code: String, name: String, phoneCode: String) {
         self.code = code
         self.name = name
         self.phoneCode = phoneCode
@@ -40,7 +51,7 @@ class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource 
     
     // MARK: - Country Methods
     
-    func setCountry(code: String) {
+    func setCountry(_ code: String) {
         var row = 0
         for index in 0..<countries.count {
             if countries[index].code == code {
@@ -55,11 +66,15 @@ class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource 
     func countryNamesByCode() -> [Country] {
         var countries = [Country]()
         
-        for code in NSLocale.ISOCountryCodes() {
-            let countryName = NSLocale.currentLocale().displayNameForKey(NSLocaleCountryCode, value: code)
+        for code in Locale.isoRegionCodes {
+            let countryName = (Locale.current as NSLocale).displayName(forKey: NSLocale.Key.countryCode, value: code) ?? ""
             
-            let phoneNumberUtil = NBPhoneNumberUtil.sharedInstance()
-            let phoneCode: String? = "+\(phoneNumberUtil.getCountryCodeForRegion(code))"
+            var phoneCode: String = "+0"
+            
+            if let phoneNumberUtil = NBPhoneNumberUtil.sharedInstance() {
+                phoneCode = "+\(phoneNumberUtil.getCountryCode(forRegion: code) ?? 0)"
+            }
+            
             
             if phoneCode != "+0" {
                 let country = Country(code: code, name: countryName, phoneCode: phoneCode)
@@ -67,26 +82,26 @@ class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource 
             }
         }
         
-        countries = countries.sort({ $0.name < $1.name })
+        countries = countries.sorted(by: { $0.name < $1.name })
         
         return countries
     }
     
     // MARK: - Picker Methods
 
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return countries.count
     }
     
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var resultView: CountryView
         
         if view == nil {
-            resultView = (NSBundle.mainBundle().loadNibNamed("CountryView", owner: self, options: nil)[0] as! CountryView)
+            resultView = (Bundle.main.loadNibNamed("CountryView", owner: self, options: nil)?[0] as! CountryView)
         } else {
             resultView = view as! CountryView
         }
@@ -96,10 +111,10 @@ class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource 
         return resultView
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let country = countries[row]
         if let countryPhoneCodeDelegate = countryPhoneCodeDelegate {
-            countryPhoneCodeDelegate.countryPhoneCodePicker(self, didSelectCountryCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!)
+            countryPhoneCodeDelegate.countryPhoneCodePicker(self, didSelectCountryCountryWithName: country.name, countryCode: country.code, phoneCode: country.phoneCode)
         }
     }
 }

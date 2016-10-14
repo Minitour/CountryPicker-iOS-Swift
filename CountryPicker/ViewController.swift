@@ -7,8 +7,8 @@ class ViewController: UIViewController, CountryPhoneCodePickerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let locale = NSLocale.currentLocale()
-        let code = locale.objectForKey(NSLocaleCountryCode) as! String
+        let locale = Locale.current
+        let code = (locale as NSLocale).object(forKey: NSLocale.Key.countryCode) as! String
         
         countryPhoneCodePicker.countryPhoneCodeDelegate = self
         countryPhoneCodePicker.setCountry(code)
@@ -16,7 +16,7 @@ class ViewController: UIViewController, CountryPhoneCodePickerDelegate {
     
     // MARK: - CountryPhoneCodePicker Delegate
     
-    func countryPhoneCodePicker(picker: CountryPicker, didSelectCountryCountryWithName name: String, countryCode: String, phoneCode: String) {
+    func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryCountryWithName name: String, countryCode: String, phoneCode: String) {
         selectedCountryLabel.text = name + " " + countryCode + " " + phoneCode
     }
     
